@@ -6,7 +6,7 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2022.08.04 a las 06:09:42 PM CDT 
+Generado el: 2022.08.12 a las 02:41:24 AM CDT 
 
   -->
       
@@ -36,15 +36,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:validateESN">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESN"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:getCatalogRegionsResponse">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogRegionsResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:validateESN">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESN"/>
                 
         </bindings>
             
@@ -120,21 +120,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSubscribersByProviderResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProviderResponse"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:getBundleBySuscriptor">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleBySuscriptor"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:validateServiceUser">
+        <bindings if-exists="true" scd="~tns:getSubscribersByProviderResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateServiceUser"/>
+            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProviderResponse"/>
                 
         </bindings>
             
@@ -144,15 +138,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogTerminals">
+        <bindings if-exists="true" scd="~tns:validateServiceUser">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminals"/>
+            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateServiceUser"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogProviders">
+        <bindings if-exists="true" scd="~tns:getCatalogTerminals">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogProviders"/>
+            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminals"/>
                 
         </bindings>
             
@@ -162,21 +156,27 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
+        <bindings if-exists="true" scd="~tns:getCatalogProviders">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogProviders"/>
+                
+        </bindings>
+            
         <bindings if-exists="true" scd="~tns:getCatalogTerminalsResponse">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminalsResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptorResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorResponse"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:getChannelsByProviderSuscriptors">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.GetChannelsByProviderSuscriptors"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:getSuscriptorResponse">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorResponse"/>
                 
         </bindings>
             
@@ -204,15 +204,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogCirclesResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogCirclesResponse"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:getCatalogBundlesAmzn">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesAmzn"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:getCatalogCirclesResponse">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogCirclesResponse"/>
                 
         </bindings>
             
@@ -294,15 +294,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:catTerminalsVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatTerminalsVO"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:channelVO">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.ChannelVO"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:catTerminalsVO">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.CatTerminalsVO"/>
                 
         </bindings>
             
@@ -360,15 +360,15 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:terminalVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.TerminalVO"/>
-                
-        </bindings>
-            
         <bindings if-exists="true" scd="~tns:responseMailVO">
                   
             <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseMailVO"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:terminalVO">
+                  
+            <class ref="com.totalplay.mx.consultsipts.wsdl.TerminalVO"/>
                 
         </bindings>
             

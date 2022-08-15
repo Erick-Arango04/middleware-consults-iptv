@@ -13,6 +13,7 @@ import com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx;
 import com.totalplay.mx.middlewareconsultsiptv.modelRequest.AccountModelRequest;
 import com.totalplay.mx.middlewareconsultsiptv.modelRequest.GetModelRequest;
+import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetBundleInfo;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesAmzn;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesNetflix;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetModelSTB;
@@ -45,6 +46,9 @@ public class SoapController {
 	
 	@Autowired
 	private SoapGetModelSTB soapGetModelSTB;
+
+	@Autowired
+	private SoapGetBundleInfo soapGetBundleInfo;
 	
 	
 	
@@ -84,6 +88,13 @@ public class SoapController {
 	@PostMapping("/getModelSTB")
 	public String getModelSTB(@RequestBody GetModelRequest getModelRequest) {
 	  return  soapGetModelSTB.getResponse(getModelRequest.getStb());
+	}
+
+	@PostMapping("/getBundleInfo")
+	public Object getBundleInfo() {
+
+		return soapGetBundleInfo.getResponse("115346980840");
+	  
 	}
 
 }
