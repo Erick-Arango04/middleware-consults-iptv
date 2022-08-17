@@ -1,32 +1,24 @@
 package com.totalplay.mx.middlewareconsultsiptv.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmzn;
 import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmznResponse;
 import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;
-import com.totalplay.mx.consultsipts.wsdl.SearchVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO;
 import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareconsultsiptv.config.SoapLoginApp;
 
 @Service
 public class SoapGetSuscriptorAmzn implements GetConsultResponse {
 
 	@Autowired
 	private SoapClient soapClient;
-
-	// Valores traidos desde el properties
-	@Value("${value.ip}")
-	private String ip;
-	
-	@Value("${value.user}")
-	private String user;
-	
-	@Value("${value.password}")
-	private String password;
+	@Autowired
+    private SoapLoginApp soapLoginApp;
 	
 	ObjectFactory objectFactory = new ObjectFactory();
 	
@@ -35,9 +27,9 @@ public class SoapGetSuscriptorAmzn implements GetConsultResponse {
 	public SuscriptorAmznVO getResponse(String account) {
 
 		UserVO userVo = new UserVO();
-		userVo.setIp(ip);
-		userVo.setUser(user);
-		userVo.setPassword(password);
+		userVo.setIp(soapLoginApp.getIp());
+		userVo.setUser(soapLoginApp.getUser());
+		userVo.setPassword(soapLoginApp.getPassword());
 
 		GetSuscriptorAmzn getSuscriptorAmzn = new GetSuscriptorAmzn();
 

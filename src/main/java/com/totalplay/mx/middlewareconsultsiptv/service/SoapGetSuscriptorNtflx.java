@@ -12,22 +12,15 @@ import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx;
 import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareconsultsiptv.config.SoapLoginApp;
 
 @Service
 public class SoapGetSuscriptorNtflx implements GetConsultResponse {
 
 	@Autowired
 	private SoapClient soapClient;
-	
-	// Valores traidos desde el properties
-	@Value("${value.ip}")
-	private String ip;
-	
-	@Value("${value.user}")
-	private String user;
-	
-	@Value("${value.password}")
-	private String password;
+	@Autowired
+    private SoapLoginApp soapLoginApp;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
@@ -35,9 +28,9 @@ public class SoapGetSuscriptorNtflx implements GetConsultResponse {
 	public SuscriptorNtflx getResponse(String account) {
 
 		UserVO userVo = new UserVO();
-		userVo.setIp(ip);
-		userVo.setUser(user);
-		userVo.setPassword(password);
+		userVo.setIp(soapLoginApp.getIp());
+		userVo.setUser(soapLoginApp.getUser());
+		userVo.setPassword(soapLoginApp.getPassword());
 
 		GetSuscriptorNtflx getSuscriptorNtflx = new GetSuscriptorNtflx();
 
