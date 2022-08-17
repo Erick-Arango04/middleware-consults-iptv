@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.totalplay.mx.consultsipts.wsdl.BundleNtflxVO;
 import com.totalplay.mx.consultsipts.wsdl.BundlesVO;
+import com.totalplay.mx.consultsipts.wsdl.ResultVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx;
 import com.totalplay.mx.middlewareconsultsiptv.modelRequest.AccountModelRequest;
@@ -70,7 +71,7 @@ public class SoapController {
 	}
 	
 	@PostMapping("/getSuscriptor")
-	public Object getSuscriptor(@RequestBody AccountModelRequest accountModelRequest) {
+	public ResultVO getSuscriptor(@RequestBody AccountModelRequest accountModelRequest) {
 		return soapGetSusccriptor.getResponse(accountModelRequest.getAccount());
 	}
 	

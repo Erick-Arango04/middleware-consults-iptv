@@ -3,7 +3,6 @@ package com.totalplay.mx.middlewareconsultsiptv.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.consultsipts.wsdl.BundlesVO;
@@ -13,32 +12,25 @@ import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;
 import com.totalplay.mx.consultsipts.wsdl.SearchVO;
 import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareconsultsiptv.config.SoapLoginApp;
 
 @Service
 public class SoapServiceGetBundleBySuscriptor implements GetConsultResponse {
 
 	@Autowired
 	private SoapClient soapClient;
+	@Autowired
+    private SoapLoginApp soapLoginApp;
 
-	// Valores traidos desde el properties
-		@Value("${value.ip}")
-		private String ip;
-		
-		@Value("${value.user}")
-		private String user;
-		
-		@Value("${value.password}")
-		private String password;
-	
 	ObjectFactory objectFactory = new ObjectFactory();
 
 	@Override
 	public List<BundlesVO> getResponse(String account) {
 
 		UserVO userVo = new UserVO();
-		userVo.setIp(ip);
-		userVo.setUser(user);
-		userVo.setPassword(password);
+	    userVo.setIp(soapLoginApp.getIp());
+		userVo.setUser(soapLoginApp.getUser());
+		userVo.setPassword(soapLoginApp.getPassword());
 
 		SearchVO searchVo = new SearchVO();
 
