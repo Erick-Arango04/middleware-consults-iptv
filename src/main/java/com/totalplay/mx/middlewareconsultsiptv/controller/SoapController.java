@@ -2,18 +2,20 @@ package com.totalplay.mx.middlewareconsultsiptv.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.totalplay.mx.consultsipts.wsdl.BundleNtflxVO;
 import com.totalplay.mx.consultsipts.wsdl.BundlesVO;
 import com.totalplay.mx.consultsipts.wsdl.ResultVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO;
 import com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx;
-import com.totalplay.mx.middlewareconsultsiptv.modelRequest.AccountModelRequest;
-import com.totalplay.mx.middlewareconsultsiptv.modelRequest.GetModelRequest;
+import com.totalplay.mx.middlewareconsultsiptv.modelResponse.AccountModelRequest;
+import com.totalplay.mx.middlewareconsultsiptv.modelResponse.GetModelRequest;
+import com.totalplay.mx.middlewareconsultsiptv.modelResponse.IdPackageId;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetBundleInfo;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesAmzn;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesNetflix;
@@ -60,15 +62,17 @@ public class SoapController {
 
 	
 	@PostMapping("/getCatalogBundlesAmzn")
-	public List<BundleNtflxVO> getCatalogBundlesAmzn() {
-		return soapGetCatalogBundlesAmzn.getResponse();
+	public boolean getCatalogBundlesAmzn(@Valid @RequestBody IdPackageId packageId) {
+		return soapGetCatalogBundlesAmzn.validateAmz(packageId.getId_package());
 	}
 
 	
 	@PostMapping("/getCatalogBundlesNetflix")
-	public List<BundleNtflxVO> getCatalogBundlesNetflix() {
-		return soapGetCatalogBundlesNetflix.getResponse();
+	public boolean getCatalogBundlesNetflix(@Valid @RequestBody IdPackageId packageId) {
+		return soapGetCatalogBundlesNetflix.validateNetflix(packageId.getId_package());
 	}
+
+	
 	
 	@PostMapping("/getSuscriptor")
 	public ResultVO getSuscriptor(@RequestBody AccountModelRequest accountModelRequest) {
@@ -92,7 +96,7 @@ public class SoapController {
 	}
 
 	@PostMapping("/getBundleInfo")
-	public Object getBundleInfo() {
+	public Object getBundleInfo(@RequestBody GetModelRequest getModelRequest) {
 
 		return soapGetBundleInfo.getResponse("115346980840");
 	  

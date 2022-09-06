@@ -10,7 +10,7 @@ public class SoapClient extends WebServiceGatewaySupport {
 
 		JAXBElement res = (JAXBElement) getWebServiceTemplate()
 				.marshalSendAndReceive(
-						"http://10.213.8.246/Consults/ConsultsService", request);
+						"http://10.213.12.163:9901/Consults/ConsultsService", request);
 		return res.getValue();
 
 	}

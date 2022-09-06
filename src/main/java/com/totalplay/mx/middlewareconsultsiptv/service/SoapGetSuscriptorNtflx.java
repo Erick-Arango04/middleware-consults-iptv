@@ -1,11 +1,7 @@
 package com.totalplay.mx.middlewareconsultsiptv.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmzn;
-import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmznResponse;
 import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorNtflx;
 import com.totalplay.mx.consultsipts.wsdl.GetSuscriptorNtflxResponse;
 import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;

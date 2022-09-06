@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.08.17 a las 04:05:49 PM CDT 
+// Generado el: 2022.08.26 a las 01:21:46 PM CDT 
 //
 
 
@@ -33,9 +33,9 @@ public class ObjectFactory {
 
     private final static QName _GetBundleBySuscriptorResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getBundleBySuscriptorResponse");
     private final static QName _GetCatalogBundlesResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogBundlesResponse");
-    private final static QName _ValidateESN_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "validateESN");
     private final static QName _ValidateESNResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "validateESNResponse");
     private final static QName _GetCatalogRegionsResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogRegionsResponse");
+    private final static QName _ValidateESN_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "validateESN");
     private final static QName _GetCatalogBundlesNetflixResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogBundlesNetflixResponse");
     private final static QName _GetBundleInfoResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getBundleInfoResponse");
     private final static QName _GetSuscriptorAmzn_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSuscriptorAmzn");
@@ -48,13 +48,13 @@ public class ObjectFactory {
     private final static QName _GetSuscriptorBlim_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSuscriptorBlim");
     private final static QName _GetSuscriptor_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSuscriptor");
     private final static QName _GetBundleInfo_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getBundleInfo");
-    private final static QName _GetBundleBySuscriptor_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getBundleBySuscriptor");
     private final static QName _GetSubscribersByProviderResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSubscribersByProviderResponse");
+    private final static QName _GetBundleBySuscriptor_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getBundleBySuscriptor");
     private final static QName _GetCatalogTerminals_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogTerminals");
     private final static QName _ValidateServiceUser_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "validateServiceUser");
     private final static QName _GetChannelsByProviderSuscriptorsResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getChannelsByProviderSuscriptorsResponse");
-    private final static QName _GetSubscribersByProvider_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSubscribersByProvider");
     private final static QName _GetCatalogProviders_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogProviders");
+    private final static QName _GetSubscribersByProvider_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSubscribersByProvider");
     private final static QName _GetCatalogTerminalsResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getCatalogTerminalsResponse");
     private final static QName _GetChannelsByProviderSuscriptors_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getChannelsByProviderSuscriptors");
     private final static QName _GetSuscriptorResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "getSuscriptorResponse");
@@ -96,14 +96,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ValidateESN }
-     * 
-     */
-    public ValidateESN createValidateESN() {
-        return new ValidateESN();
-    }
-
-    /**
      * Create an instance of {@link ValidateESNResponse }
      * 
      */
@@ -117,6 +109,14 @@ public class ObjectFactory {
      */
     public GetCatalogRegionsResponse createGetCatalogRegionsResponse() {
         return new GetCatalogRegionsResponse();
+    }
+
+    /**
+     * Create an instance of {@link ValidateESN }
+     * 
+     */
+    public ValidateESN createValidateESN() {
+        return new ValidateESN();
     }
 
     /**
@@ -216,19 +216,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetBundleBySuscriptor }
-     * 
-     */
-    public GetBundleBySuscriptor createGetBundleBySuscriptor() {
-        return new GetBundleBySuscriptor();
-    }
-
-    /**
      * Create an instance of {@link GetSubscribersByProviderResponse }
      * 
      */
     public GetSubscribersByProviderResponse createGetSubscribersByProviderResponse() {
         return new GetSubscribersByProviderResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBundleBySuscriptor }
+     * 
+     */
+    public GetBundleBySuscriptor createGetBundleBySuscriptor() {
+        return new GetBundleBySuscriptor();
     }
 
     /**
@@ -256,19 +256,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetSubscribersByProvider }
-     * 
-     */
-    public GetSubscribersByProvider createGetSubscribersByProvider() {
-        return new GetSubscribersByProvider();
-    }
-
-    /**
      * Create an instance of {@link GetCatalogProviders }
      * 
      */
     public GetCatalogProviders createGetCatalogProviders() {
         return new GetCatalogProviders();
+    }
+
+    /**
+     * Create an instance of {@link GetSubscribersByProvider }
+     * 
+     */
+    public GetSubscribersByProvider createGetSubscribersByProvider() {
+        return new GetSubscribersByProvider();
     }
 
     /**
@@ -488,19 +488,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CatRegionsVO }
-     * 
-     */
-    public CatRegionsVO createCatRegionsVO() {
-        return new CatRegionsVO();
-    }
-
-    /**
      * Create an instance of {@link CircleVO }
      * 
      */
     public CircleVO createCircleVO() {
         return new CircleVO();
+    }
+
+    /**
+     * Create an instance of {@link CatRegionsVO }
+     * 
+     */
+    public CatRegionsVO createCatRegionsVO() {
+        return new CatRegionsVO();
     }
 
     /**
@@ -536,19 +536,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ResponseMailVO }
-     * 
-     */
-    public ResponseMailVO createResponseMailVO() {
-        return new ResponseMailVO();
-    }
-
-    /**
      * Create an instance of {@link TerminalVO }
      * 
      */
     public TerminalVO createTerminalVO() {
         return new TerminalVO();
+    }
+
+    /**
+     * Create an instance of {@link ResponseMailVO }
+     * 
+     */
+    public ResponseMailVO createResponseMailVO() {
+        return new ResponseMailVO();
     }
 
     /**
@@ -658,19 +658,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ValidateESN }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ValidateESN }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "validateESN")
-    public JAXBElement<ValidateESN> createValidateESN(ValidateESN value) {
-        return new JAXBElement<ValidateESN>(_ValidateESN_QNAME, ValidateESN.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ValidateESNResponse }{@code >}
      * 
      * @param value
@@ -694,6 +681,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getCatalogRegionsResponse")
     public JAXBElement<GetCatalogRegionsResponse> createGetCatalogRegionsResponse(GetCatalogRegionsResponse value) {
         return new JAXBElement<GetCatalogRegionsResponse>(_GetCatalogRegionsResponse_QNAME, GetCatalogRegionsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ValidateESN }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ValidateESN }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "validateESN")
+    public JAXBElement<ValidateESN> createValidateESN(ValidateESN value) {
+        return new JAXBElement<ValidateESN>(_ValidateESN_QNAME, ValidateESN.class, null, value);
     }
 
     /**
@@ -853,19 +853,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetBundleBySuscriptor }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetBundleBySuscriptor }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getBundleBySuscriptor")
-    public JAXBElement<GetBundleBySuscriptor> createGetBundleBySuscriptor(GetBundleBySuscriptor value) {
-        return new JAXBElement<GetBundleBySuscriptor>(_GetBundleBySuscriptor_QNAME, GetBundleBySuscriptor.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetSubscribersByProviderResponse }{@code >}
      * 
      * @param value
@@ -876,6 +863,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getSubscribersByProviderResponse")
     public JAXBElement<GetSubscribersByProviderResponse> createGetSubscribersByProviderResponse(GetSubscribersByProviderResponse value) {
         return new JAXBElement<GetSubscribersByProviderResponse>(_GetSubscribersByProviderResponse_QNAME, GetSubscribersByProviderResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBundleBySuscriptor }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetBundleBySuscriptor }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getBundleBySuscriptor")
+    public JAXBElement<GetBundleBySuscriptor> createGetBundleBySuscriptor(GetBundleBySuscriptor value) {
+        return new JAXBElement<GetBundleBySuscriptor>(_GetBundleBySuscriptor_QNAME, GetBundleBySuscriptor.class, null, value);
     }
 
     /**
@@ -918,19 +918,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSubscribersByProvider }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetSubscribersByProvider }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getSubscribersByProvider")
-    public JAXBElement<GetSubscribersByProvider> createGetSubscribersByProvider(GetSubscribersByProvider value) {
-        return new JAXBElement<GetSubscribersByProvider>(_GetSubscribersByProvider_QNAME, GetSubscribersByProvider.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetCatalogProviders }{@code >}
      * 
      * @param value
@@ -941,6 +928,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getCatalogProviders")
     public JAXBElement<GetCatalogProviders> createGetCatalogProviders(GetCatalogProviders value) {
         return new JAXBElement<GetCatalogProviders>(_GetCatalogProviders_QNAME, GetCatalogProviders.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetSubscribersByProvider }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetSubscribersByProvider }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "getSubscribersByProvider")
+    public JAXBElement<GetSubscribersByProvider> createGetSubscribersByProvider(GetSubscribersByProvider value) {
+        return new JAXBElement<GetSubscribersByProvider>(_GetSubscribersByProvider_QNAME, GetSubscribersByProvider.class, null, value);
     }
 
     /**

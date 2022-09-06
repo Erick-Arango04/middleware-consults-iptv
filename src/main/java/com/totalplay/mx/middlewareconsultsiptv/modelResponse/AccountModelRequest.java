@@ -1,8 +1,8 @@
-package com.totalplay.mx.middlewareconsultsiptv.modelRequest;
+package com.totalplay.mx.middlewareconsultsiptv.modelResponse;
 
 public class AccountModelRequest {
-	
-	private String account;
+    
+    private String account;
 
 	public AccountModelRequest(){}
 
@@ -17,8 +17,5 @@ public class AccountModelRequest {
 	public void setAccount(String account) {
 		this.account = account;
 	}
-	
-	
-	
-
+    
 }

@@ -11,6 +11,7 @@ import com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesNetflixResponse;
 import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
 
+
 @Service
 public class SoapGetCatalogBundlesNetflix{
 
@@ -33,4 +34,21 @@ public class SoapGetCatalogBundlesNetflix{
 		return bundlesListNetflix;
 	}
 
+	public boolean validateNetflix(String id_package) {
+
+		List<BundleNtflxVO> response = getResponse();
+
+		for (BundleNtflxVO bundleNtflxVO : response) {
+          
+            if (id_package.equals(bundleNtflxVO.getPlanID())) {
+				
+				return true;
+				
+			}
+			
+		}
+
+		return false;
+		
+	}
 }
