@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: consult-iptv-config
+  namespace: middleware-consult-iptv
+  labels:
+    app: clubwifi-information
+data:
+  package.name: com.totalplay.mx.middlewareclubwifiinformation.wsdl
+  billing.address: svc-tp-connector-brm-on.tpmicroservices:7001/BrmBridgeClient/BrmDirectApi
