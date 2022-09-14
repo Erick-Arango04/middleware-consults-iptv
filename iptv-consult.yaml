@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: consult-iptv
-  namespace: middleware-consult-iptv
+  name: iptv-consult
+  namespace: middleware-iptv-consult
   labels:
-    app: consult-iptv
+    app: iptv-consult
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: consult-iptv
+      app: iptv-consult
   template:
     metadata:
       labels:
-        app: consult-iptv
+        app: iptv-consult
     spec:
       containers:
-        - name: consult-iptv
-          image: swr.na-mexico-1.myhuaweicloud.com/cce-middleware-ms-soa/consult-iptv-service:latest
+        - name: iptv-consult
+          image: swr.na-mexico-1.myhuaweicloud.com/cce-middleware-ms-soa/iptv-consult-service:latest
           envFrom:
             - configMapRef:
-                name: consult-iptv-config
+                name: iptv-consult-config
           imagePullPolicy: Always
           ports:
           - containerPort: 8011
@@ -32,10 +32,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: consult-iptv
-  namespace: middleware-consult-iptv
+  name: iptv-consult
+  namespace: middleware-iptv-consult
   labels:
-    app: consult-iptv
+    app: iptv-consult
   annotations:
     kubernetes.io/elb.class: union
     kubernetes.io/elb.id: 3ae3d247-dc04-42c0-a468-a16aeb63e078
@@ -47,7 +47,7 @@ spec:
       targetPort: 8011
       protocol: TCP
   selector:
-    app: consult-iptv
+    app: iptv-consult
   type: LoadBalancer
   loadBalancerIP: 10.218.46.248
   externalTrafficPolicy: Cluster
